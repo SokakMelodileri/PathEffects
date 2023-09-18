@@ -18,6 +18,7 @@ public final class PathEffects extends JavaPlugin {
         getServer().getConsoleSender().sendMessage("§aPathEffects is enabled");
         getServer().getPluginManager().registerEvents(new PathListener(this), this);
         getCommand("patheffects").setExecutor(new PathCommands(this));
+        getCommand("patheffects").setTabCompleter(new TabComplete(this));
     }
 
     @Override
